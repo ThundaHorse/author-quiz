@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style/App.css';
 import './style/bootstrap.min.css';
 
@@ -15,6 +16,7 @@ function App({turnData, highlight, onAnswerSelected }) {
       <Hero />
       <Turn {...turnData} highlight= {highlight} onAnswerSelected={onAnswerSelected} />
       <Continue />
+      <p><Link to='/add'>Add Author</Link></p>
       <Footer />
     </div>
   );
