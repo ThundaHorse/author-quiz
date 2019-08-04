@@ -3,6 +3,7 @@ import React from 'react';
 import Book from './Book';
 import Hero from './Hero';
 import Footer from './Footer';
+import Continue from './Continue';
 import PropTypes from 'prop-types';
 
 function Turn({ author, books, highlight, onAnswerSelected }) {
@@ -42,4 +43,4 @@ Turn.propTypes = {
 }
 
 // Export as one 
-export { Turn, Book, Hero, Footer };
+export { Turn, Book, Hero, Footer, Continue };
