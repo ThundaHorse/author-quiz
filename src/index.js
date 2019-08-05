@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { BrowserRouter, Route, withRouter } from 'react-router-dom';
 import AuthorQuiz from './AuthorQuiz';
+import Home from './components/Home';
 import AddAuthorForm from './components/AddAuthorForm';
 import * as serviceWorker from './serviceWorker';
 import {shuffle, sample} from 'underscore'; 
@@ -80,7 +81,8 @@ function render() {
   ReactDOM.render(
     <BrowserRouter>
       <React.Fragment>
-        <Route exact path='/' component={App} />
+        <Route exact path='/' component={Home} />
+        <Route exact path='/questions' component={App} />
         <Route path='/add' component={AuthorWrapper} />
       </React.Fragment>
     </BrowserRouter>, document.getElementById('root'));

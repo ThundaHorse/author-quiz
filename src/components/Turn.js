@@ -3,6 +3,7 @@ import React from 'react';
 import Book from './Book';
 import Hero from './Hero';
 import Footer from './Footer';
+import Home from './Home';
 import Continue from './Continue';
 import PropTypes from 'prop-types';
 
@@ -13,7 +14,6 @@ function Turn({ author, books, highlight, onAnswerSelected }) {
       'correct': 'green', 
       'wrong': 'red'
     }
-
     return mapping[highlight];
   }
 
@@ -21,7 +21,8 @@ function Turn({ author, books, highlight, onAnswerSelected }) {
     <div className="row turn" style={{ backgroundColor: highlightBg(highlight) }}>
       <div className="col-4 offset-1">
         <img src={author.imageUrl} className="authorimage" alt="Author" />
-        <p style={{ textAlign: "center" }}>{author.name}</p>
+          <br/>
+        <h4 style={{ textAlign: "center" }}>{author.name}</h4>
       </div>
       <div className="col-6">
         {books.map((title) => <Book title={title} key={title} onClick={onAnswerSelected} />)}
@@ -43,4 +44,4 @@ Turn.propTypes = {
 }
 
 // Export as one 
-export { Turn, Book, Hero, Footer, Continue };
+export { Turn, Book, Hero, Home, Footer, Continue };

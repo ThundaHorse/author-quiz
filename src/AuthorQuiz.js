@@ -12,7 +12,7 @@ function AuthorQuiz({turnData, highlight, onAnswerSelected, onContinue }) {
       <Hero />
       <Turn {...turnData} highlight= {highlight} onAnswerSelected={onAnswerSelected} />
       <Continue show={highlight === 'correct'} onContinue={onContinue}/>
-      <p><Link to='/add'>Add Author</Link></p>
+      <p><Link to='/'>Back Home</Link></p>
       <Footer />
     </div>
   );
